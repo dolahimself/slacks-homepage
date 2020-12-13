@@ -1,244 +1,629 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
-<head>
-	<title>this is my second trial towards designing slack 2</title>
-	<style type="text/css">
-		body {
-				display: flex;
-				flex-direction: column;
-			}
+	<head>
+		<title>this is my second trial towards designing slack 2</title>
+		<style type="text/css">
+			body {
+					display: flex;
+					flex-direction: column;
+					font-family:  Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma,Arial, sans-serif;
+					background
+				}
 
-			header {
-				background-color: rgba(255, 255, 255, 1);
-				height: 10.7vh;
-			}
+				header {
+					background-color: rgba(255, 255, 255, 1);
+					height: 10.0vh;
+					position : fixed;
+					width: 100%;
+					top: 0px;
+					border-bottom: 1px solid rgba(119, 119, 119, 0.3);
+				}
 
-			header ul {
-				display: flex;
-				flex-direction: row;
-			}
+				header:hover .section1 {
+					background-color: rgba(255, 255, 255, 1);
+					height: 10.0vh;
+				}
 
-			.logo {
-				height: 75px;
-				margin-top: -25px; 
-				margin-right: 7px;
-			}
+				header ul {
+					display: flex;
+					flex-direction: row;
+				}
 
-			.right-top-menu {
-				float: left;
-			}
+				.logo {
+					height: 75px;
+					margin-top: -30px; 
+					margin-right: 5px;
+				}
 
-			.right-top-menu li {
-				list-style-type: none;
-				padding: 8px;
-				margin: 10px;
-			}
+				.right-top-menu {
+					float: left;
+				}
 
-			.right-top-menu li > a {
-				text-decoration: none;
-				color: rgba(0, 0, 0, 0.8);
-			}
+				.right-top-menu li {
+					list-style-type: none;
+					padding: 8px;
+					margin: 10px;
+					margin-top: -6px;
+				}
 
-			.right-top-menu li > a:hover {
-				color: rgba(0, 0, 255, 0.7);
-			}
+				.right-top-menu li > a {
+					text-decoration: none;
+					color: rgba(0, 0, 0, 0.8);
+				}
 
-			.right-top-menu li > a:active {
-				border: 1px dash rgba(52, 0, 103, 0.2)
-			}
+				.right-top-menu li > a:hover {
+					color: rgba(0, 0, 255, 0.7);
+				}
 
-			.left-top-menu {
-				float: right;
-			}
+				.right-top-menu li > a:active {
+					border: 1px dash rgba(52, 0, 103, 0.2)
+				}
 
-			.left-top-menu li {
-				list-style-type: none;
-				padding: 8px;
-				margin: 10px;
-			}
+				.left-top-menu {
+					float: right;
+				}
 
-			.left-top-menu li > a {
-				text-decoration: none;
-				color: rgba(0, 0, 0, 0.8);
-			}
+				.left-top-menu li {
+					list-style-type: none;
+					padding: 8px;
+					margin: 10px;
+					margin-top: -6px;
+				}
 
-			.left-top-menu li > a:hover {
-				color: rgba(0, 0, 255, 0.7);
-			}
+				.left-top-menu li > a {
+					text-decoration: none;
+					color: rgba(0, 0, 0, 0.8);
+				}
 
-			.leftt-top-menu li > a:active {
-				border: 1px dash rgba(52, 0, 103, 0.2)
-			}
+				.left-top-menu li > a:hover {
+					color: rgba(0, 0, 255, 0.7);
+					text-decoration: underline;
+				}
 
-			.button1 {
-				background-color: rgb(103, 0, 103, 1);
-				border: 0px none rgb(103, 0, 103, 1);
-				border-radius: 5px;
-				height: 34px;
-				width: 130px;
-				margin-top: -10px;
-			}
+				.leftt-top-menu li > a:active {
+					border: 1px dash rgba(52, 0, 103, 0.2)
+				}
 
-			.button1 a {
-				color: rgba(255, 255, 255, 1);
-				text-decoration: none;
-			}
+				.button1 {
+					background-color: rgb(103, 0, 103, 1);
+					border: 0px none rgb(103, 0, 103, 1);
+					border-radius: 5px;
+					height: 34px;
+					width: 130px;
+					margin-top: -10px;
+				}
 
-			.intro {
-				background-color: rgba(230, 154, 255, 0.25);
-				height: 155vh;
-				width: 100%;
-			}
+				.button1 a {
+					color: rgba(255, 255, 255, 1);
+					text-decoration: none;
+				}
 
-			.section1 {
-				width: 40vw;
-				height: 360px;
-				float: left;
-				margin: 10px;
-				margin-top: 50px;
-				margin-left: 50px;
-			}
+/*				.dropdown {
+					position: relative;
+					display: inline-block;
+				} */
 
-			.section1 h1 {
-				font-size: 42px;
-			}
-
-			.section1 p {
-				font-size: 16px;
-				margin-top: 15px;
-			}
-
-			.section2 video {
-				height: 360px;
-				float: right;
-				margin-top: 50px;
-				margin-right: 50px;
-			}
-
-			.section3 {
-				width: 40vw;
-				height: 360px;
-				float: right;
-				margin-left: -310px;
-				margin-top: 70px;
-			}
-
-			.section3 h1 {
-				font-size: 42px;
-			}
-
-			.section3 p {
-				font-size: 16px;
-				margin-top: 15px;
-			}
-
-			.section4 video {
-				height: 460px;
-				float: left;
-				margin-left: -550px;
-				border: 0px solid rgba(255, 255, 255, 1);
-				border-radius: 5px;
-				margin-top: 70px;
-			}
-
-			.button2 {
-				background-color: rgb(103, 0, 103, 1);
-				border-radius: 5px;
-				border: 0px solid rgba(103, 0, 103, 1);
-				height: 54px;
-				width: 160px;
-				margin-top: -10px;
-				color: rgba(255, 255, 255, 1);
-				font-size: 18px;
-			}
-
-			.button2 a {
-				color: rgba(255, 255, 255, 1);
-				text-decoration: none;
-			}
-
-			.button3 {
-				background-color: rgb(255, 255, 255, 1);
-				border-radius: 5px;
-				height: 54px;
-				width: 160px;
-				margin-top: -10px;
-				color: rgba(103, 0, 103, 1);
-				border: 1.5px solid rgba(103, 0, 103, 1);
-				font-size: 18px;
-			}
-
-			.button3 a {
-				color: rgba(103, 0, 103, 1);
-				text-decoration: none;
-			}
+				.right-top-menu ul li > a:hover .dropdown-content {
+					display: block;
+					position: absolute;
+					background-color: rgba(255, 255, 255, 1);
+					border: 1px solid rgba(255, 255, 255, 1);
+					box-shadow: ;
+				}
 
 
-	</style>
-</head>
-<body>
-	<header>
-		<ul class="right-top-menu">
-				<li><img src="https://www.b2bnn.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-17-at-2.29.34-PM.png" alt="Official slack logo" class="logo"></li>
-				<li><a href=""></a>Why slack</li>
-				<li><a href="https://slack.com/intl/en-ng/solutions">Solution</a></li>
-				<li><a href="">Resources</a></li>
-				<li><a href="https://slack.com/intl/en-ng/enterprise">Enterprise</a></li>
-				<li><a href="https://slack.com/intl/en-ng/pricing">Pricing</a></li>
+
+
+				.dropdown-content {
+					display: none;
+					position: absolute;
+					background-color: rgba(255, 255, 255, 0.3);
+					min-width: 200px;
+					box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2) 
+					z-index: 1;
+				}
+
+				.dropdown-content a {
+					color: inherit;
+					padding: 10px;
+					text-decoration: none;
+					display: block;
+				}
+
+				.dropdown-content a:hover {
+					color: rgba(51, 51, 255, 0.9);
+				}
+
+
+
+
+
+				.intro {
+					background-color: rgba(230, 154, 255, 0.25);
+					height: 142vh;
+					width: 100%;
+				}
+
+				.section1 {
+					width: 40vw;
+					height: 360px;
+					float: left;
+					margin: 10px;
+					margin-top: 90px;
+					margin-left: 50px;
+					padding: 4px;
+				}
+
+				.section1 h1 {
+					font-size: 48px;
+				}
+
+				.section1 p {
+					font-size: 16px;
+					margin-top: 15px;
+				}
+
+				.section2 video {
+					height: 360px;
+					float: right;
+					margin-top: 90px;
+					margin-right: 50px;
+				}
+
+				.section3 {
+					width: 40vw;
+					height: 360px;
+					float: right;
+					margin-left: -310px;
+					margin-top: 70px;
+				}
+
+				.section3 h1 {
+					font-size: 42px;
+				}
+
+				.section3 p {
+					font-size: 16px;
+					margin-top: 15px;
+				}
+
+				.section4 video {
+					height: 460px;
+					float: left;
+					margin-left: -550px;
+					border: 0px solid rgba(255, 255, 255, 1);
+					border-radius: 5px;
+					margin-top: 70px;
+				}
+
+				.button2 {
+					background-color: rgb(103, 0, 103, 1);
+					border-radius: 5px;
+					border: 0px solid rgba(103, 0, 103, 1);
+					height: 54px;
+					width: 160px;
+					margin-top: -10px;
+					color: rgba(255, 255, 255, 1);
+					font-size: 18px;
+				}
+
+				.button2 a {
+					color: rgba(255, 255, 255, 1);
+					text-decoration: none;
+				}
+
+				.button3 {
+					background-color: rgb(255, 255, 255, 1);
+					border-radius: 5px;
+					height: 54px;
+					width: 160px;
+					margin-top: -10px;
+					color: rgba(103, 0, 103, 1);
+					border: 1.5px solid rgba(103, 0, 103, 1);
+					font-size: 18px;
+				}
+
+				.button3 a {
+					color: rgba(103, 0, 103, 1);
+					text-decoration: none;
+				}
+
+				.partners {
+					background-color: rgba(255, 255, 255, 1);
+					height: vh;
+				}
+
+				.partners-links {
+					align-content: center;
+					justify-content: center;
+					margin-top: 122px;
+					width: 50vw;
+					margin-left: 350px;
+				}
+
+				.partners-links h1 {
+					font-size: 42px;
+				}
+
+				.partners-links a {
+					text-decoration: none;
+					font-size: 18px;
+				}
+
+				.partners-quote {
+					width: 40vw;
+					height: 260px;
+					float: center;
+					margin: 10px;
+					margin-top: 40px;
+				}
+
+				.partners-quote q {
+					font-size: 26px;
+				}
+
+				.partners-quote p {
+					font-size: 18px;
+					margin-top: 15px;
+				}
+
+				.partners-image img {
+					float: right;
+					margin-right: -2px;
+					margin-top: -280px;
+				}
+
+				.partners-logos {
+					display: flex;
+					flex-direction: row;
+				}
+
+				.partners-logos li {
+					margin-top: 25px;
+					list-style-type: none;
+					justify-content: space-between;
+					display: inline;
+					padding: 38px;
+				}
+
+				.nav {
+					background-color: rgba(77, 0, 77, 1);
+					height: 52vh;
+					display: flex;
+					flex-direction: column;
+					background-image: url();
+				}
+
+				.nav .button2  {
+					width: 190px;
+					background-color: rgb(77, 0, 77, 1);
+					font-size: 13px;
+					font-weight: bold;
+					border: 1px solid rgba(255, 255, 255, 1)
+				}
+
+				.nav .button2:hover {
+					border: 2px solid rgba(255, 255, 255, 1)
+				} 
+
+				.nav .button3  {
+					width: 190px;
+					background-color: rgb(255, 255, 255, 1);
+					font-size: 13px;
+					font-weight: bold;
+					border: 1px solid rgba(77, 0, 77, 1)
+					color: rgba(77, 0, 77, 1);
+				}
+
+				.nav .button3:hover {
+					border: 2px solid rgba(77, 0, 77, 1)
+				} 
+
+				.nav h1 {
+					margin: 10px;
+					color: rgba(255, 255, 255, 1);
+					font-size: 42px;
+					margin-left: 400px;
+					margin-top: 95px;
+				} 
+
+				.nav ul {
+					margin: 0px auto;
+					margin-top: 30PX;
+				}
+
+				.nav li {
+					list-style-type: none;
+					display: inline;
+					margin-top: 95px;
+					margin-left: -17px;
+					padding: 10px;
+				}
+
+				.slackproduct {
+					height: 100vh;
+					background-color: rgba(255, 255, 255, 1);
+					display: flex;
+					flex-direction: row;
+					margin-top: 80px;
+				}
+
+				.slackproduct li {
+					list-style-type: none;
+				}
+
+				.slackproduct a {
+					text-decoration: none;
+					color: rgba(100, 100, 100, 0.5);
+				}
+
+				.slackproduct a:hover {
+					text-decoration: none;
+					color: rgba(51, 51, 255, 0.9);
+				}
+
+				.navlogo {
+					width: 45vw;
+				}
+
+				.navlogo img{
+					padding: 40px;
+					height: 100px;
+					margin-top: -35px;
+					height: 9vh;
+				}
+
+				.navproducts {
+					width: 55vw;
+					display: flex;
+					flex-direction: row;
+					margin-left: -200px;
+					margin-top: -16PX;
+				}
+
+				.navproducts li {
+					padding: 8px;
+					font-size: 14px;
+					margin: 0px;
+					margin-left: 40px;
+				}
+
+				.navproducts ul {
+					padding: 5px;
+				}
+
+				.navproducts li > a {
+					color: rgba(119, 119, 119, 1.0);
+				}
+
+				footer ul {
+					display: flex;
+					flex-direction: row;
+				}
+
+				.up {
+					background-color: rgba(179, 179, 179, 0.2);
+					height: 12vh;
+				}
+
+				.up a {
+					font-size: 14px;
+				}
+
+				.up .left-top-menu img {
+					padding: -95px;
+				}
+
+				.down {
+					background-color: rgba(179, 179, 179, 0.4);
+					width: 100%;
+					height: 8vh;
+					margin-top: -18px;
+					font-size: 14px;
+					color: rgba(179, 179, 179, 1);
+				}
+
+				.down p {
+					font-size: 12px;
+					color: rgba(0, 0, 0, 0.7);
+				}
+		</style>
+	</head>
+	<body>
+		<header>
+			<ul class="right-top-menu">
+					<li><img src="https://www.b2bnn.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-17-at-2.29.34-PM.png" alt="Official slack logo" class="logo"></li>
+					<li><a href="#">Why slack?</a>
+						<div class="dropdown-content">
+							<ul>
+								<li><a href="https://slack.com/intl/en-ng/features">Features</a></li>
+								<li><a href="https://slack.com/intl/en-ng/why/slack-vs-email">How it replaces email</a></li>
+								<li><a href="https://slack.com/intl/en-ng/security">Security</a></li>
+								<li><a href="https://slack.com/intl/en-ng/customers">Customers</a></li>
+								<li><a href="https://slack.com/intl/en-ng/connect">Slack Connect</a>	</li>
+							</ul>	
+						</div>
+					</li>
+					<li><a href="https://slack.com/intl/en-ng/solutions">Solution</a></li>
+					<li><a href="#">Resources</a>
+						<div class="dropdown-content">
+							<ul>
+								<li><a href="https://slack.com/intl/en-ng/features">Resources Library</a>
+									<div class="sub-dropdown-content">
+										<ul>
+											<li><a href="https://slack.com/intl/en-ng/features">Library home</a></li>
+											<li><a href="https://slack.com/intl/en-ng/why/slack-vs-email">Why use Slack?</a></li>
+											<li><a href="https://slack.com/intl/en-ng/security">Slack 101</a></li>
+											<li><a href="https://slack.com/intl/en-ng/customers">Using Slack</a></li>
+											<li><a href="https://slack.com/intl/en-ng/connect">Slack for Admins</a></li>
+											<li><a href="https://slack.com/intl/en-ng/connect">Slack of work report</a></li>
+										</ul>	
+									</div>
+								</li>
+								<li><a href="https://slack.com/intl/en-ng/why/slack-vs-email">Slack Tips</a>
+									<div class="sub-dropdown-content">
+										<ul>
+											<li><a href="https://slack.com/intl/en-ng/features">Slack Tips Home</a></li>
+											<li><a href="https://slack.com/intl/en-ng/why/slack-vs-email">Boost work Productivity</a></li>
+											<li><a href="https://slack.com/intl/en-ng/security">Slack basics</a></li>
+											<li><a href="https://slack.com/intl/en-ng/customers">Cross-functional collaboration</a></li>
+											<li><a href="https://slack.com/intl/en-ng/connect">Every department & role</a></li>
+											<li><a href="https://slack.com/intl/en-ng/connect">Quick & Simple</a></li>
+										</ul>	
+									</div>
+								</li>
+								<li><a href="https://slack.com/intl/en-ng/security">Blog</a>
+									<div class="sub-dropdown-content">
+										<ul>
+											<li><a href="https://slack.com/intl/en-ng/features">Blog home</a></li>
+											<li><a href="https://slack.com/intl/en-ng/why/slack-vs-email">Collaboration</a></li>
+											<li><a href="https://slack.com/intl/en-ng/security">Productivity</a></li>
+											<li><a href="https://slack.com/intl/en-ng/customers">Transformation</a></li>
+											<li><a href="https://slack.com/intl/en-ng/connect">News</a></li>
+										</ul>	
+									</div>
+								</li>
+								<li><a href="https://slack.com/intl/en-ng/events/webinars">Webinars</a></li>
+								<li><a href="https://www.slackcertified.com/">Slack Certified Program</a></li>
+								<li><a href="https://slack.com/help">Help Center</a></li>
+								<li><a href="https://api.slack.com/">API</a></li>
+								<li><a href="https://slack.com/intl/en-ng/apps">App Directory</a></li>
+								<li><a href="https://slack.com/intl/en-ng/download">Download</a></li>
+							</ul>	
+						</div>
+					</li>
+					<li><a href="https://slack.com/intl/en-ng/enterprise">Enterprise</a></li>
+					<li><a href="https://slack.com/intl/en-ng/pricing">Pricing</a></li>
 			</ul>
 			<ul class="left-top-menu">
-				<li><a href="https://slack.com/intl/en-ng/contact-sales?geocode=en-ng">Contact Sales</a></li>
-				<li><a href="https://slack.com/signin">Sign In</a></li>
-				<li><button class="button1"><a href="https://slack.com/get-started">Try for free</a></button></li>
+					<li><a href="https://slack.com/intl/en-ng/contact-sales?geocode=en-ng">Contact Sales</a></li>
+					<li><a href="https://slack.com/signin">Sign In</a></li>
+					<li><button class="button1"><a href="https://slack.com/get-started">Try for free</a></button></li>
 			</ul>
-	</header>
-	<div class="intro">
-		<article>
-			<section class="section1">
-				<h1>Welcome to your new HQ</h1>
-				<p>Teamwork can be hard, messy, complicated… and still the best way to work. That’s why we made Slack — a place where people get work done, together.</p>
-				<button class="button2"><a href="https://slack.com/intl/en-ng/get-started">TRY FOR ME</a></button>
+		</header>
+		<div class="intro">
+			<article>
+				<section class="section1">
+					<h1>Welcome to your new HQ</h1>
+					<p>Teamwork can be hard, messy, complicated… and still the best way to work. That’s why we made Slack — a place where people get work done, together.</p>
+					<button class="button2"><a href="https://slack.com/intl/en-ng/get-started">TRY FOR ME</a></button>
+				</section>
+				<section class="section2">
+					<video><source src="https://a.slack-edge.com/9b527/marketing/img/homepage/hp-prospect/hero/desktop/mp4/hero-image.mp4" type="video/mp4" loop autoplay></video>			
+				</section>	
+			</article>
+			<article>
+				<section class="section3">
+					<h1>A better way to communicate</h1>
+					<p>Unlike email, conversations in Slack are easy to follow. And they’re more than conversations — you can make calls, share files, and even connect with other apps.</p>
+					<button class="button3"><a href="https://slack.com/intl/en-ng/features">SEE ALL FEATURES</a></button>
+				</section>
+				<section class="section4">
+					<video><source src="https://a.slack-edge.com/5f6f2/marketing/img/homepage/hp-prospect/channels/bring-your-team-together-in-channels.mp4" type="video/mp4" loop autoplay controls></video>			
+				</section>
+			</article>
+		</div>
+		<div class="partners">
+			<section class="partners-links">
+				<h1>Over 750,000 companies use Slack to get work done</h1>
+				<a href="https://slack.com/intl/en-ng/customer-stories">See all customers stories ---></a>
 			</section>
-			<section class="section2">
-				<video><source src="https://a.slack-edge.com/9b527/marketing/img/homepage/hp-prospect/hero/desktop/mp4/hero-image.mp4" type="video/mp4" loop autoplay></video>			
-			</section>	
-		</article>
-		<article>
-			<section class="section3">
-				<h1>A better way to communicate</h1>
-				<p>Unlike email, conversations in Slack are easy to follow. And they’re more than conversations — you can make calls, share files, and even connect with other apps.</p>
-				<button class="button3"><a href="https://slack.com/intl/en-ng/features">TRY FOR ME</a></button>
+			<section class="partners-quote">
+				<q><i>I help to bring product from the wild to the kitchen, and all across the dining room,” Koseba explains. “[With Slack] there’s no wasted time or wasted product because you’re able to communicate things right away.</i></q>
+				<p><b>Katina ConnaughtonKatina Connaughton</b></p>
+				<p>Head Farmer, SingleThread</p>
 			</section>
-			<section class="section4">
-				<video><source src="https://a.slack-edge.com/5f6f2/marketing/img/homepage/hp-prospect/channels/bring-your-team-together-in-channels.mp4" type="video/mp4" loop autoplay controls></video>			
+			<section class="partners-image">
+				<img src="https://a.slack-edge.com/ce67d/marketing/img/stories/singlethread/customer-story.png" alt="picture of a woman cooking" align="left">
 			</section>
-		</article>
-	</div>
-	<div>
-		<section>
-			<h1>Over 750,000 companies use Slack to get work done</h1>
-			<a href="https://slack.com/intl/en-ng/customer-stories">See all customers stories ---></a>
-		</section>
-		<section>
-			<q>I help to bring product from the wild to the kitchen, and all across the dining room,” Koseba explains. “[With Slack] there’s no wasted time or wasted product because you’re able to communicate things right away.</q>
-			<p><b>Katina ConnaughtonKatina Connaughton</b> </p>
-			<p>Head Farmer, SingleThread</p>
-		</section>
-		<section>
-			<img src="https://a.slack-edge.com/ce67d/marketing/img/stories/singlethread/customer-story.png" alt="picture of a woman cooking" align="left">
-		</section>
-		<section>
+			<section>
+				<ul class="partners-logos">
+					<li><a href="https://slack.com/customer-stories/fox"><img src="https://a.slack-edge.com/ce67d/marketing/img/logos/company/_color/fox.png" alt="fox"></a></li>
+					<li><a href="https://slack.com/blog/collaboration/channeling-the-road-less-traveled-with-lonely-planet"><img src="https://a.slack-edge.com/ce67d/marketing/img/logos/company/_color/lonelyplanet.png" alt="lonelyplanet"></a></li>
+					<li><a href="https://slack.com/customer-stories/intuit"><img src="https://a.slack-edge.com/e2fa17/marketing/img/logos/company/_color/intuit.png" alt="intuit"></a></li>
+					<li><a href="https://slack.com/blog/collaboration/carvana-slack-car-buying"><img src="https://a.slack-edge.com/ce67d/marketing/img/logos/company/_color/carvana.png" alt="carvana-slack-car-buying"></a></li>
+					<li><a href="https://slack.com/blog/collaboration/kiva-slack-crowdfund-loans-underserved-communities"><img src="https://a.slack-edge.com/ce67d/marketing/img/logos/company/_color/kiva.png" alt="kiva-slack-crowdfund-loans-underserved-communities"></a></li>
+					<li><a href="https://slack.com/customer-stories/target"><img src="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/target-logo.png" alt="target-logo"></a></li>
+					<li><a href="https://slack.com/blog/collaboration/devacurl-communication-tangle-free-slack"><img src="https://a.slack-edge.com/ce67d/marketing/img/logos/company/_color/devacurl.png" alt="devacurl-communication-tangle-free-slack"></a></li>
+				</ul>
+			</section>
+		</div>
+		<div class="nav">
+			<h1>Choose a better way to work</h1>
 			<ul>
-				<li><a href="https://slack.com/customer-stories/fox"><img src="https://a.slack-edge.com/ce67d/marketing/img/logos/company/_color/fox.png" alt="fox"></a></li>
-				<li><a href="https://slack.com/blog/collaboration/channeling-the-road-less-traveled-with-lonely-planet"><img src="https://a.slack-edge.com/ce67d/marketing/img/logos/company/_color/lonelyplanet.png" alt="lonelyplanet"></a></li>
-				<li><a href="https://slack.com/customer-stories/intuit"><img src="https://a.slack-edge.com/e2fa17/marketing/img/logos/company/_color/intuit.png" alt="intuit"></a></li>
-				<li><a href="https://slack.com/blog/collaboration/carvana-slack-car-buying"><img src="https://a.slack-edge.com/ce67d/marketing/img/logos/company/_color/carvana.png" alt="carvana-slack-car-buying"></a></li>
-				<li><a href="https://slack.com/blog/collaboration/kiva-slack-crowdfund-loans-underserved-communities"><img src="https://a.slack-edge.com/ce67d/marketing/img/logos/company/_color/kiva.png" alt="kiva-slack-crowdfund-loans-underserved-communities"></a></li>
-				<li><a href="https://slack.com/customer-stories/target"><img src="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/target-logo.png" alt="target-logo"></a></li>
-				<li><a href="https://slack.com/blog/collaboration/devacurl-communication-tangle-free-slack"><img src="https://a.slack-edge.com/ce67d/marketing/img/logos/company/_color/devacurl.png" alt="devacurl-communication-tangle-free-slack"></a></li>
+				<li><button class="button3">TRY FOR FREE</button></li>
+				<li><button class="button2">CONTACT SALES</button></li>
 			</ul>
-		</section>
-	</div>
-</body>
+		</div>
+		<div class="slackproduct">
+			<section class="navlogo">
+				<a href="https://slack.com/intl/en-ng/"><img src="https://assets.stickpng.com/images/5cb480cd5f1b6d3fbadece79.png" alt="Slack"></a>
+			</section>
+			<section class="navproducts">
+			<ul>
+				<li><b>PRODUCT</b></li>
+				<li><a href="https://slack.com/intl/en-ng/features">Features</a></li>
+				<li><a href="https://slack.com/intl/en-ng/enterprise">Enterprise</a></li>
+				<li><a href="https://slack.com/intl/en-ng/security">Security</a></li>
+				<li><a href="https://slack.com/intl/en-ng/trust">Trust</a></li>
+				<li><a href="https://slack.com/intl/en-ng/customer-stories">Customer stories</a></li>
+				<li><a href="https://slack.com/intl/en-ng/pricing">Pricing</a></li>
+				<li><a href="https://slackdemo.com/?vst=9l73rfjgzf9ai89ntxwkhvjd1">Slack Demo</a></li>
+			</ul>
+			<ul>
+				<li><b>SLACK FOR TEAMS</b></li>
+				<li><a href="https://slack.com/intl/en-ng/solutions/engineering">engineering</a></li>
+				<li><a href="https://slack.com/intl/en-ng/solutions/financial-services">financial services</a></li>
+				<li><a href="https://slack.com/intl/en-ng/solutions/sales">Sales</a></li>
+				<li><a href="https://slack.com/intl/en-ng/solutions/information-technology">IT</a></li>
+				<li><a href="https://slack.com/intl/en-ng/solutions/marketing">Marketing</a></li>
+				<li><a href="https://slack.com/intl/en-ng/solutions/customer-support">customer support</a></li>
+				<li><a href="https://slack.com/intl/en-ng/solutions/human-resources">human resources</a></li>
+				<li><a href="https://slack.com/intl/en-ng/solutions/project-management">project management</a></li>
+				<li><a href="https://slack.com/intl/en-ng/solutions/media">media</a></li>
+			</ul>
+			<ul>
+				<li><b>RESOURCES</b></li>
+				<li><a href="https://slack.com/intl/en-ng/resources">resources library</a></li>
+				<li><a href="https://slack.com/intl/en-ng/slack-tips">slack tips</a></li>
+				<li><a href="https://slackhq.com/">blog</a></li>
+				<li><a href="https://slack.com/intl/en-ng/events">events</a></li>
+				<li><a href="https://www.slackcertified.com/">slack certified program</a></li>
+				<li><a href="https://slack.com/intl/en-ng/help">help center</a></li>
+				<li><a href="https://api.slack.com/">API</a></li>
+				<li><a href="https://slack.com/intl/en-ng/solutions/project-management">App directory</a></li>
+				<li><a href="https://slack.com/intl/en-ng/apps">download slack</a></li>
+				<li><a href="https://slack.com/intl/en-ng/partners">partners</a></li>
+			</ul>
+			<ul>
+				<li><b>COMPANY</b></li>
+				<li><a href="https://slack.com/intl/en-ng/about">About us</a></li>
+				<li><a href="https://slack.com/intl/en-ng/about/leadership">leadership</a></li>
+				<li><a href="https://slack.com/intl/en-ng/blog/news">news</a></li>
+				<li><a href="https://slack.com/intl/en-ng/media-kit">media kit</a></li>
+				<li><a href="https://slack.com/intl/en-ng/careers">careers</a></li>
+				<li><a href="https://slack.shop/">slack swag store</a></li>
+			</ul>
+			</section>	
+		</div>
+		<footer>
+			<section class="up">
+			<ul class="right-top-menu">
+				<li><a href="https://status.slack.com/"><b>Status</b></a></li>
+				<li><a href="https://slack.com/intl/en-ng/legal"><b>privacy terms</b></a></li>
+				<li><a href="https://slack.com/intl/en-ng/help/contact"><b>contact us</b></a></li>
+				<li><a href="#"><b>Change region</b></a></li>
+			</ul>
+			<ul class="left-top-menu">
+				<li><a href="https://twitter.com/slackhq" target="_blank"><img src="https://img.icons8.com/android/24/000000/twitter.png" alt="slack twitter"></a></li>
+				<li><a href="https://facebook.com/slackhq"><img src="https://img.icons8.com/fluent-systems-filled/24/000000/facebook.png" alt="slack facebook"></a></li>
+				<li><a href="https://www.youtube.com/channel/UCY3YECgeBcLCzIrFLP4gblw"><img src="https://img.icons8.com/material-rounded/24/000000/youtube-play.png" alt="slack youtube"></a></li>
+				<li><a href="https://www.linkedin.com/company/tiny-spec-inc/"><img src="https://img.icons8.com/android/24/000000/linkedin.png" alt="slack linkedin"></a></li>
+			</ul>
+			</section>
+			<section class="down">
+				<p>© Copyright 2020 Slack Technologies, Inc. All rights reserved. Various trademarks held by their respective owners.</p>
+			</section>
+		</footer>
+	</body>
 </html>
